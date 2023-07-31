@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,17 +19,20 @@
         <rowConstraints>
             <RowConstraints maxHeight="93.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="235.0" minHeight="10.0" prefHeight="235.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="17.0" valignment="CENTER" vgrow="SOMETIMES" />
         </rowConstraints>
-        <ImageView fx:id="drumImg1" fitHeight="194.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
-        <ImageView fx:id="drumImg2" fitHeight="194.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <ImageView fx:id="drumImg3" fitHeight="194.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-        <Button fx:id="btnHold1" mnemonicParsing="false" text="Hold" GridPane.rowIndex="2" />
-        <Button fx:id="btnHold2" mnemonicParsing="false" text="Hold" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-        <Button fx:id="btnHold3" mnemonicParsing="false" text="Hold" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <ImageView fx:id="drumImg1" fitHeight="194.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+        <ImageView fx:id="drumImg2" fitHeight="194.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+        <ImageView fx:id="drumImg3" fitHeight="194.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+        <Button fx:id="btnHold1" mnemonicParsing="false" text="Hold" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Button fx:id="btnHold2" mnemonicParsing="false" text="Hold" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Button fx:id="btnHold3" mnemonicParsing="false" text="Hold" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
     </GridPane>
-    <HBox layoutX="14.0" layoutY="436.0" prefHeight="100.0" prefWidth="200.0">
+    <HBox layoutX="14.0" layoutY="436.0" prefHeight="36.0" prefWidth="171.0" spacing="40.0">
         <Button fx:id="btnBet" mnemonicParsing="false" text="Bet" />
         <Button fx:id="btnSpin" mnemonicParsing="false" text="Spin" />
+      <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
     </HBox>
 </AnchorPane>
