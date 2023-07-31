@@ -4,21 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="images cropped">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cherry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/grapes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/bell.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/cherry.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/grapes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/lemon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/melon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/orange.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/seven.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/strawberry.png" afterDir="false" />
+    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="arraylist of images created">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/bell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/lemon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/melon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/seven.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/strawberry.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/images/img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/fruitMachineView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/fruitMachineView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/main-View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/main-View.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +40,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/james.keogh/IdeaProjects/ImagesInLabels/src/main/resources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/james.keogh/IdeaProjects/ImagesInLabels/src/main/resources&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src\main\resources" />
@@ -109,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690814937306</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="arraylist of images created">
+      <option name="closed" value="true" />
+      <created>1690827612632</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690827612632</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +132,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init commit" />
     <MESSAGE value="images cropped" />
-    <option name="LAST_COMMIT_MESSAGE" value="images cropped" />
+    <MESSAGE value="arraylist of images created" />
+    <option name="LAST_COMMIT_MESSAGE" value="arraylist of images created" />
   </component>
 </project>

@@ -30,7 +30,7 @@
     </GridPane>
     <HBox layoutX="14.0" layoutY="436.0" prefHeight="36.0" prefWidth="171.0" spacing="40.0">
         <Button fx:id="btnBet" mnemonicParsing="false" text="Bet" />
-        <Button fx:id="btnSpin" mnemonicParsing="false" text="Spin" />
+        <Button fx:id="btnSpin" mnemonicParsing="false" text="Spin" onAction="#SpinUp" />
       <padding>
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </padding>
