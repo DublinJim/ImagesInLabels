@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/fruitMachineView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/hello-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/main-View.fxml" afterDir="false" />
+    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="images cropped">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cherry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/grapes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/bell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/cherry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/grapes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/lemon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/melon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/seven.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/strawberry.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/images/img.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +48,22 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/james.keogh/IdeaProjects/ImagesInLabels/src/main/resources"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src\main\resources" />
+      <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src\main\resources\com\example\imagesinlabels" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src\main\java\com\example\imagesinlabels" />
+      <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src\main\resources" />
+      <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src\main\resources\com\example\imagesinlabels\images" />
+      <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.imagesinlabels.HelloApplication" />
@@ -82,9 +93,40 @@
       <option name="presentableId" value="Default" />
       <updated>1690400334246</updated>
     </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <option name="closed" value="true" />
+      <created>1690811471927</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690811471927</updated>
+    </task>
+    <task id="LOCAL-00002" summary="images cropped">
+      <option name="closed" value="true" />
+      <created>1690814937306</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690814937306</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init commit" />
+    <MESSAGE value="images cropped" />
+    <option name="LAST_COMMIT_MESSAGE" value="images cropped" />
   </component>
 </project>
