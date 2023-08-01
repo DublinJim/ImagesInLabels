@@ -1,7 +1,5 @@
 package com.example.imagesinlabels;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -49,21 +47,24 @@ public class Controller implements Initializable {
 
     }  //end init
 
-    private void spinUp(){
 
-    }
 
     private int randomReel() {
         Random random = new Random();
-        int rand1= random.nextInt(2 + 1);
-        return rand1;
+        return random.nextInt(2 + 1);
     }
 
-    public void SpinUp(ActionEvent actionEvent) {
-        drumImg1.setImage(imageList.get(randomReel()));
-        drumImg2.setImage(imageList.get(randomReel()));
-        drumImg3.setImage(imageList.get(randomReel()));
+    public void SpinUp() {
+        int reel1 = randomReel();
+        int reel2 = randomReel();
+        int reel3 = randomReel();
 
+        drumImg1.setImage(imageList.get(reel1));
+        drumImg2.setImage(imageList.get(reel2));
+        drumImg3.setImage(imageList.get(reel3));
+        if (reel1 == reel2 && reel3 == reel2) {
+            System.out.println("Jackpot!");
+        }
 
     }
 }//end
