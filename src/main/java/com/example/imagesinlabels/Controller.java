@@ -1,10 +1,12 @@
 package com.example.imagesinlabels;
 
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -22,6 +24,8 @@ public class Controller implements Initializable {
     public Button btnBet;
     public Button btnSpin;
     private final ArrayList<Image> imageList = new ArrayList<>();
+    public Text betAmtTxt;
+    public Text jkPotTxt;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -49,12 +53,15 @@ public class Controller implements Initializable {
 
 
 
+
+    @FXML
     private int randomReel() {
         Random random = new Random();
         return random.nextInt(2 + 1);
     }
 
-    public void SpinUp() {
+
+    public void spinUp() {
         int reel1 = randomReel();
         int reel2 = randomReel();
         int reel3 = randomReel();
@@ -62,9 +69,12 @@ public class Controller implements Initializable {
         drumImg1.setImage(imageList.get(reel1));
         drumImg2.setImage(imageList.get(reel2));
         drumImg3.setImage(imageList.get(reel3));
+        validateWin(reel1, reel2, reel3);
+    }
+
+    private static void validateWin(int reel1, int reel2, int reel3) {
         if (reel1 == reel2 && reel3 == reel2) {
             System.out.println("Jackpot!");
         }
-
     }
 }//end
