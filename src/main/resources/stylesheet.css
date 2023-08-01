@@ -133,6 +133,16 @@
     -fx-font-size: 14px;
 }
 
+
+#btnSpin {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+}
+
+
+
 /*--------------------------------------------------------------------------------------------------------*/
 
 #blue {
@@ -166,7 +176,31 @@
 
 /*----------------------------------------------------------------------------------------------------------------*/
 .button {
-    -fx-background-color: #8bd9d6;
+    -fx-background-color: #b62f2f;
+    -fx-background-radius: 20;
+    -fx-border-color: #00a8e8;
+    -fx-border-radius:20;
+    -fx-border-width: 2px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-padding: 6px 12px;
+}
+
+.button:hover {
+    -fx-background-color: #bd6876;
+    -fx-border-color: #00a8e8;
+}
+
+.button:pressed {
+    -fx-background-color: #008bbf;
+    -fx-border-color: #008bbf;
+}
+
+
+
+
+.buttonBlue {
+    -fx-background-color: #b62f2f;
     -fx-background-radius: 10;
     -fx-border-color: #00a8e8;
     -fx-border-width: 2px;
@@ -175,15 +209,16 @@
     -fx-padding: 6px 12px;
 }
 
-.button:hover {
-    -fx-background-color: #00a8e8;
+.buttonBlue:hover {
+    -fx-background-color: #bd6876;
     -fx-border-color: #00a8e8;
 }
 
-.button:pressed {
+.buttonBlue:pressed {
     -fx-background-color: #008bbf;
     -fx-border-color: #008bbf;
 }
+
 
 
 

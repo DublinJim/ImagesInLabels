@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="new function tests for jackpot">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stylesheet.css" afterDir="false" />
+    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="adds a stylesheet">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/arrow1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/fruitMachineView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/fruitMachineView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheet.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +49,8 @@
       <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src\main\resources\com\example\imagesinlabels" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src\main\java\com\example\imagesinlabels" />
       <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src\main\resources" />
+      <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src\main\java\com\example\imagesinlabels" />
       <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src\main\resources\com\example\imagesinlabels\images" />
       <recent name="C:\Users\james.keogh\IdeaProjects\ImagesInLabels\src" />
     </key>
@@ -132,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690897969161</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adds a stylesheet">
+      <option name="closed" value="true" />
+      <created>1690899536932</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690899536932</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +162,7 @@
     <MESSAGE value="day ends" />
     <MESSAGE value="adds a jackpot counter" />
     <MESSAGE value="new function tests for jackpot" />
-    <option name="LAST_COMMIT_MESSAGE" value="new function tests for jackpot" />
+    <MESSAGE value="adds a stylesheet" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds a stylesheet" />
   </component>
 </project>

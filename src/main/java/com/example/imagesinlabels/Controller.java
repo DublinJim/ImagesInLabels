@@ -14,6 +14,7 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
+    private final ArrayList<Image> imageList = new ArrayList<>();
     public AnchorPane rootPane;
     public ImageView drumImg1;
     public ImageView drumImg2;
@@ -23,13 +24,13 @@ public class Controller implements Initializable {
     public Button btnHold3;
     public Button btnBet;
     public Button btnSpin;
-    private final ArrayList<Image> imageList = new ArrayList<>();
     public Text betAmtTxt;
     public Text jkPotTxt;
+    public ImageView upImgView;
+    public ImageView downImgView;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
 
 
         imageList.add(new Image("bell.png"));
@@ -42,16 +43,21 @@ public class Controller implements Initializable {
         imageList.add(new Image("strawberry.png"));
 
 
-
         drumImg1.setImage(imageList.get(0));
         drumImg2.setImage(imageList.get(0));
         drumImg3.setImage(imageList.get(0));
 
-     btnSpin.setOnAction(e -> spinUp());
+        btnSpin.setStyle("#btnSpin");
+        btnSpin.setOnAction(e -> spinUp());
+
+
+        Image upImg = new Image("upArrow.png");
+        Image downImg = new Image("downArrow.png");
+
+        upImgView.setImage(upImg);
+        downImgView.setImage(downImg);
 
     }  //end init
-
-
 
 
     @FXML
@@ -73,7 +79,7 @@ public class Controller implements Initializable {
         validateWin(reel1, reel2, reel3);
     }
 
-    private  void validateWin(int reel1, int reel2, int reel3) {
+    private void validateWin(int reel1, int reel2, int reel3) {
         if (reel1 == reel2 && reel3 == reel2) {
             jkPotTxt.setText("WINNER !!!!");
         }
