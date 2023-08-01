@@ -47,7 +47,7 @@ public class Controller implements Initializable {
         drumImg2.setImage(imageList.get(0));
         drumImg3.setImage(imageList.get(0));
 
-        randomReel();
+     btnSpin.setOnAction(e -> spinUp());
 
     }  //end init
 
@@ -69,12 +69,13 @@ public class Controller implements Initializable {
         drumImg1.setImage(imageList.get(reel1));
         drumImg2.setImage(imageList.get(reel2));
         drumImg3.setImage(imageList.get(reel3));
+        jkPotTxt.setText("Spin!!!");
         validateWin(reel1, reel2, reel3);
     }
 
-    private static void validateWin(int reel1, int reel2, int reel3) {
+    private  void validateWin(int reel1, int reel2, int reel3) {
         if (reel1 == reel2 && reel3 == reel2) {
-            System.out.println("Jackpot!");
+            jkPotTxt.setText("WINNER !!!!");
         }
     }
 }//end
