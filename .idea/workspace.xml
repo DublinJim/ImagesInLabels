@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="adds a stylesheet">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/arrow1.png" afterDir="false" />
+    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="adds up and down images">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/background.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/fruitMachineView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/fruitMachineView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/stylesheet.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +139,23 @@
       <option name="project" value="LOCAL" />
       <updated>1690899536932</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adds up and down images">
+      <option name="closed" value="true" />
+      <created>1690909440218</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1690909440218</updated>
+    </task>
+    <task id="LOCAL-00009" summary="adds up and down images">
+      <option name="closed" value="true" />
+      <created>1690909632612</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690909632612</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +178,7 @@
     <MESSAGE value="adds a jackpot counter" />
     <MESSAGE value="new function tests for jackpot" />
     <MESSAGE value="adds a stylesheet" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds a stylesheet" />
+    <MESSAGE value="adds up and down images" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds up and down images" />
   </component>
 </project>

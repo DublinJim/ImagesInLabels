@@ -5,7 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 
 import java.net.URL;
@@ -28,10 +28,27 @@ public class Controller implements Initializable {
     public Text jkPotTxt;
     public ImageView upImgView;
     public ImageView downImgView;
-private int credit=10;
+    private int credit = 10;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        Image backgroundImage = new Image("background.PNG");
+
+        BackgroundImage backgroundImg = new BackgroundImage(
+                backgroundImage,
+                BackgroundRepeat.NO_REPEAT, // Set to REPEAT if you want to repeat the image
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.DEFAULT,
+                new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true)
+        );
+
+
+
+
+        Background background = new Background(backgroundImg);
+
+rootPane.setBackground(background);
 
         imageList.add(new Image("bell.png"));
         imageList.add(new Image("cherry.png"));
