@@ -42,7 +42,7 @@
            <Button fx:id="btnBet" alignment="CENTER" mnemonicParsing="false" prefHeight="101.0" prefWidth="62.0" text="Bet" />
       </children>
    </VBox>
-   <VBox alignment="CENTER" layoutX="137.0" layoutY="368.0" prefHeight="200.0" prefWidth="100.0">
+   <VBox alignment="CENTER" layoutX="137.0" layoutY="396.0" prefHeight="194.0" prefWidth="100.0" spacing="20.0">
       <children>
          <ImageView fx:id="upImgView" fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true" />
          <Text fx:id="betAmtTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="Bet amt" />

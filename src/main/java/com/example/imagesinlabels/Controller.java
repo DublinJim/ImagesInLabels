@@ -28,7 +28,7 @@ public class Controller implements Initializable {
     public Text jkPotTxt;
     public ImageView upImgView;
     public ImageView downImgView;
-
+private int credit=10;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -56,6 +56,8 @@ public class Controller implements Initializable {
 
         upImgView.setImage(upImg);
         downImgView.setImage(downImg);
+
+        betAmtTxt.setText(String.valueOf(credit));
 
     }  //end init
 
