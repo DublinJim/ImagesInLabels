@@ -1,5 +1,8 @@
 package com.example.imagesinlabels;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -7,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -33,7 +37,7 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        Image backgroundImage = new Image("background.PNG");
+        Image backgroundImage = new Image("background2.PNG");
 
         BackgroundImage backgroundImg = new BackgroundImage(
                 backgroundImage,
@@ -49,6 +53,25 @@ public class Controller implements Initializable {
         Background background = new Background(backgroundImg);
 
 rootPane.setBackground(background);
+jkPotTxt.setText("Play Now");
+        jkPotTxt.setStyle("-fx-font-size: 24; -fx-text-fill: red;");
+
+        // Create the Timeline to control the blinking animation
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.ZERO, event -> jkPotTxt.setVisible(true)),
+                new KeyFrame(Duration.seconds(0.5), event -> jkPotTxt.setVisible(false)),
+                new KeyFrame(Duration.seconds(1.0), event -> jkPotTxt.setVisible(true))
+        );
+
+        // Set the animation to repeat indefinitely
+        timeline.setCycleCount(Animation.INDEFINITE);
+
+        // Start the animation
+        timeline.play();
+
+
+
+
 
         imageList.add(new Image("bell.png"));
         imageList.add(new Image("cherry.png"));
