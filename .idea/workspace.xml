@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="adds the background image">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Template.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/background.xcf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/background2.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/marquee.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/winner.PNG" afterDir="false" />
+    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="day ends">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/background.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/background.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/background2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/background2.PNG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/fruitMachineView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/imagesinlabels/fruitMachineView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/marquee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/marquee.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="2T7i4ydrtu65qWkEG3behgX2C1L" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -168,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690913407508</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="day ends">
+      <option name="closed" value="true" />
+      <created>1690919333924</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1690919333924</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,12 +193,12 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="images cropped" />
     <MESSAGE value="arraylist of images created" />
-    <MESSAGE value="day ends" />
     <MESSAGE value="adds a jackpot counter" />
     <MESSAGE value="new function tests for jackpot" />
     <MESSAGE value="adds a stylesheet" />
     <MESSAGE value="adds up and down images" />
     <MESSAGE value="adds the background image" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds the background image" />
+    <MESSAGE value="day ends" />
+    <option name="LAST_COMMIT_MESSAGE" value="day ends" />
   </component>
 </project>

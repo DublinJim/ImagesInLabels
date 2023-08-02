@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
@@ -32,28 +33,35 @@ public class Controller implements Initializable {
     public Text jkPotTxt;
     public ImageView upImgView;
     public ImageView downImgView;
+    public ColumnConstraints reelGrid;
+    public HBox spinHbox;
     private int credit = 10;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        Image backgroundImage = new Image("background2.PNG");
-
+    private static Background getBackground(Image image) {
         BackgroundImage backgroundImg = new BackgroundImage(
-                backgroundImage,
+                image,
                 BackgroundRepeat.NO_REPEAT, // Set to REPEAT if you want to repeat the image
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.DEFAULT,
                 new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true)
+
         );
 
+        return new Background(backgroundImg);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Image backgroundImage = new Image("background2.PNG");
+        Background background = getBackground(backgroundImage);
+        rootPane.setBackground(background);
 
 
+        Image reelsPic = new Image("marquee.png");
+        Background reelBackGround = getBackground(reelsPic);
+        spinHbox.setBackground(reelBackGround);
 
-        Background background = new Background(backgroundImg);
-
-rootPane.setBackground(background);
-jkPotTxt.setText("Play Now");
+        jkPotTxt.setText("Play Now");
         jkPotTxt.setStyle("-fx-font-size: 24; -fx-text-fill: red;");
 
         // Create the Timeline to control the blinking animation
@@ -68,9 +76,6 @@ jkPotTxt.setText("Play Now");
 
         // Start the animation
         timeline.play();
-
-
-
 
 
         imageList.add(new Image("bell.png"));
@@ -99,8 +104,20 @@ jkPotTxt.setText("Play Now");
 
         betAmtTxt.setText(String.valueOf(credit));
 
+        btnBet.setOnAction(event -> betUpDown());
+
+        upImgView.setOnMouseClicked(event ->{
+            if ( credit<10) {
+                credit++;
+                System.out.println("up");
+            }
+        } );
+
     }  //end init
 
+    private void betUpDown() {
+
+    }
 
     @FXML
     private int randomReel() {
@@ -124,6 +141,24 @@ jkPotTxt.setText("Play Now");
     private void validateWin(int reel1, int reel2, int reel3) {
         if (reel1 == reel2 && reel3 == reel2) {
             jkPotTxt.setText("WINNER !!!!");
+        }
+    }
+
+    public void upBet(MouseEvent mouseEvent) {
+        if ( credit<10) {
+            credit++;
+        }
+
+
+
+
+
+    }
+
+    public void downBet(MouseEvent mouseEvent) {
+        if (credit <0) {
+            credit++;
+            System.out.println("down");
         }
     }
 }//end
