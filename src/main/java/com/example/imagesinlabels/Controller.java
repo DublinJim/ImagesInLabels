@@ -39,6 +39,8 @@ public class Controller implements Initializable {
     public Label lblDownBet;
     public Label lblCredits;
     public Text txtCredits;
+    public Label lblAmtBet;
+    public Text txtAmtBet;
     private int credit = 10;
 
     private static Background getBackground(Image image) {

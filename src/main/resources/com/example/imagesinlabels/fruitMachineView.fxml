@@ -56,4 +56,6 @@
     </VBox>
    <Text fx:id="txtCredits" layoutX="639.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
    <Label fx:id="lblCredits" layoutX="636.0" layoutY="459.0" text="credits" />
+   <Label fx:id="lblAmtBet" layoutX="311.0" layoutY="428.0" text="Label" />
+   <Text fx:id="txtAmtBet" layoutX="357.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
 </AnchorPane>

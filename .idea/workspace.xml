@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="adds a credit counter">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" afterDir="false" />
-    </list>
+    <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="day ends" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691005288190</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="day ends">
+      <option name="closed" value="true" />
+      <created>1691005732645</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1691005732645</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,10 +223,10 @@
     <MESSAGE value="adds a stylesheet" />
     <MESSAGE value="adds up and down images" />
     <MESSAGE value="adds the background image" />
-    <MESSAGE value="day ends" />
     <MESSAGE value="adds buttons and stuff" />
     <MESSAGE value="adds a cool image setter for labels" />
     <MESSAGE value="adds a credit counter" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds a credit counter" />
+    <MESSAGE value="day ends" />
+    <option name="LAST_COMMIT_MESSAGE" value="day ends" />
   </component>
 </project>
