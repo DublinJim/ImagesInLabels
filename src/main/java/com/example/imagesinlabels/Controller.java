@@ -102,14 +102,32 @@ public class Controller implements Initializable {
         imagesToNodes("downArrow.png", lblDownBet);
 
 
-        lblUpBet.setOnMouseClicked(mouseEvent -> {
-        });
+        lblUpBet.setOnMouseClicked(mouseEvent -> betUp());
+        lblDownBet.setOnMouseClicked(mouseEvent -> betDown());
 
         betAmtTxt.setText(String.valueOf(credit));
         btnBet.setOnAction(event -> betUpDown());
 
 
     }  //end init
+
+    private void betUp() {
+        if (credit < 10) {
+            credit++;
+
+            betAmtTxt.setText(String.valueOf(credit));
+        } else if (credit == 10) {
+            betAmtTxt.setText(String.valueOf(credit));
+        }
+
+    }
+
+    private void betDown() {
+        if (credit > 0) {
+            credit--;
+            betAmtTxt.setText(String.valueOf(credit));
+        } else if (credit == 0) betAmtTxt.setText("0");
+    }
 
     private void imagesToNodes(String imageName, Label label) {
         Image image = new Image(imageName);
