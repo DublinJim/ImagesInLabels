@@ -37,6 +37,8 @@ public class Controller implements Initializable {
     public HBox spinHbox;
     public Label lblUpBet;
     public Label lblDownBet;
+    public Label lblCredits;
+    public Text txtCredits;
     private int credit = 10;
 
     private static Background getBackground(Image image) {
@@ -114,12 +116,10 @@ public class Controller implements Initializable {
     private void betUp() {
         if (credit < 10) {
             credit++;
-
             betAmtTxt.setText(String.valueOf(credit));
         } else if (credit == 10) {
             betAmtTxt.setText(String.valueOf(credit));
         }
-
     }
 
     private void betDown() {
@@ -162,6 +162,7 @@ public class Controller implements Initializable {
     private void validateWin(int reel1, int reel2, int reel3) {
         if (reel1 == reel2 && reel3 == reel2) {
             jkPotTxt.setText("WINNER !!!!");
+            int winnings = credit*3;
         }
     }
 
