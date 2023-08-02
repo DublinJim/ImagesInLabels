@@ -6,9 +6,9 @@ import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
@@ -31,10 +31,12 @@ public class Controller implements Initializable {
     public Button btnSpin;
     public Text betAmtTxt;
     public Text jkPotTxt;
-    public ImageView upImgView;
-    public ImageView downImgView;
+
+
     public ColumnConstraints reelGrid;
     public HBox spinHbox;
+    public Label lblUpBet;
+    public Label lblDownBet;
     private int credit = 10;
 
     private static Background getBackground(Image image) {
@@ -96,24 +98,25 @@ public class Controller implements Initializable {
         btnSpin.setOnAction(e -> spinUp());
 
 
-        Image upImg = new Image("upArrow.png");
-        Image downImg = new Image("downArrow.png");
+        imagesToNodes("upArrow.png", lblUpBet);
+        imagesToNodes("downArrow.png", lblDownBet);
 
-        upImgView.setImage(upImg);
-        downImgView.setImage(downImg);
+
+        lblUpBet.setOnMouseClicked(mouseEvent -> {
+        });
 
         betAmtTxt.setText(String.valueOf(credit));
-
         btnBet.setOnAction(event -> betUpDown());
 
-        upImgView.setOnMouseClicked(event ->{
-            if ( credit<10) {
-                credit++;
-                System.out.println("up");
-            }
-        } );
 
     }  //end init
+
+    private void imagesToNodes(String imageName, Label label) {
+        Image image = new Image(imageName);
+        ImageView imageView = new ImageView(image);
+        label.setGraphic(imageView);
+
+    }
 
     private void betUpDown() {
 
@@ -144,21 +147,4 @@ public class Controller implements Initializable {
         }
     }
 
-    public void upBet(MouseEvent mouseEvent) {
-        if ( credit<10) {
-            credit++;
-        }
-
-
-
-
-
-    }
-
-    public void downBet(MouseEvent mouseEvent) {
-        if (credit <0) {
-            credit++;
-            System.out.println("down");
-        }
-    }
 }//end
