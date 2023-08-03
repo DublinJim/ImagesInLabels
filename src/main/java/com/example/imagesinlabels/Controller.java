@@ -71,11 +71,7 @@ public class Controller implements Initializable {
         jkPotTxt.setStyle("-fx-font-size: 24; -fx-text-fill: red;");
 
         // Create the Timeline to control the blinking animation
-        Timeline timeline = new Timeline(
-                new KeyFrame(Duration.ZERO, event -> jkPotTxt.setVisible(true)),
-                new KeyFrame(Duration.seconds(0.5), event -> jkPotTxt.setVisible(false)),
-                new KeyFrame(Duration.seconds(1.0), event -> jkPotTxt.setVisible(true))
-        );
+        Timeline timeline = getTimeline(jkPotTxt);
 
         // Set the animation to repeat indefinitely
         timeline.setCycleCount(Animation.INDEFINITE);
@@ -114,6 +110,15 @@ public class Controller implements Initializable {
 
 
     }  //end init
+
+    private Timeline getTimeline(Text textNode) {
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.ZERO, event -> textNode.setVisible(true)),
+                new KeyFrame(Duration.seconds(0.5), event -> textNode.setVisible(false)),
+                new KeyFrame(Duration.seconds(1.0), event -> textNode.setVisible(true))
+        );
+        return timeline;
+    }
 
     private void betUp() {
         if (credit < 10) {
