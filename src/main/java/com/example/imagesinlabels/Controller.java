@@ -44,7 +44,9 @@ public class Controller implements Initializable {
     public ImageView imgTestWinner;
     private int credit = 10;
     private boolean onWinning;
-private   int winnings;
+    private int winnings;
+    private Timeline flashAnimation;
+
     private static Background getBackground(Image image) {
         BackgroundImage backgroundImg = new BackgroundImage(
                 image,
@@ -97,7 +99,8 @@ private   int winnings;
 
         imagesToNodes("upArrow.png", lblUpBet);
         imagesToNodes("downArrow.png", lblDownBet);
-
+        lblAmtBet.setText("");
+        imagesToNodes("bettingImg.PNG", lblAmtBet);
 
         lblUpBet.setOnMouseClicked(mouseEvent -> betUp());
         lblDownBet.setOnMouseClicked(mouseEvent -> betDown());
@@ -107,6 +110,14 @@ private   int winnings;
 
 
     }  //end init
+
+    private void flashHoldBtns(Button button) {
+        flashAnimation = new Timeline(
+                new KeyFrame(Duration.seconds(0.5), event -> button.setVisible(!button.isVisible()))
+        );
+        flashAnimation.setCycleCount(Timeline.INDEFINITE); // Repeat indefinitely
+        flashAnimation.play();
+    }
 
     private void winnerFlash(Timeline imgTestWinner) {
         imgTestWinner.setCycleCount(Animation.INDEFINITE);
@@ -132,7 +143,7 @@ private   int winnings;
 
     private void betUp() {
 
-        if (onWinning==false) {
+        if (!onWinning) {
             if (credit < 10) {
                 credit++;
                 betAmtTxt.setText(String.valueOf(credit));
@@ -143,7 +154,7 @@ private   int winnings;
     }
 
     private void betDown() {
-        if (onWinning==false) {
+        if (!onWinning) {
             if (credit > 0) {
                 credit--;
                 betAmtTxt.setText(String.valueOf(credit));
@@ -155,7 +166,6 @@ private   int winnings;
         Image image = new Image(imageName);
         ImageView imageView = new ImageView(image);
         label.setGraphic(imageView);
-
     }
 
     private void betUpDown() {
@@ -178,6 +188,12 @@ private   int winnings;
         drumImg2.setImage(imageList.get(reel2));
         drumImg3.setImage(imageList.get(reel3));
         jkPotTxt.setText("Spin!!!");
+
+        flashHoldBtns(btnHold1);
+        flashHoldBtns(btnHold2);
+        flashHoldBtns(btnHold3);
+
+
         validateWin(reel1, reel2, reel3);
     }
 
@@ -185,9 +201,16 @@ private   int winnings;
         if (reel1 == reel2 && reel3 == reel2) {
             onWinning = true;
             jkPotTxt.setText("WINNER !!!!");
-
+            turnOffButtons();
+            flashAnimation.stop();
             winnings = credit * 3;
         }
+    }
+
+    private void turnOffButtons() {
+        btnBet.setDisable(true);
+        btnSpin.setDisable(true);
+
     }
 
 }//end
