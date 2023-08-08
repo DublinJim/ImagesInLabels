@@ -64,6 +64,7 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        imgTestWinner.setVisible(false);
         Image backgroundImage = new Image("background2.PNG");
         Background background = getBackground(backgroundImage);
         rootPane.setBackground(background);
@@ -79,7 +80,7 @@ public class Controller implements Initializable {
         // Create the Timeline to control the blinking animation
         winnerFlash(getTimelineText(jkPotTxt));
 
-        winnerFlash(getTimelineForImage(imgTestWinner));
+
 
         imageList.add(new Image("bell.png"));
         imageList.add(new Image("cherry.png"));
@@ -108,7 +109,7 @@ public class Controller implements Initializable {
         lblDownBet.setOnMouseClicked(mouseEvent -> betDown());
 
         betAmtTxt.setText(String.valueOf(credit));
-        btnBet.setOnAction(event -> betUpDown());
+        btnBet.setOnAction(event -> placeBet());
 
 
     }  //end init
@@ -175,7 +176,7 @@ public class Controller implements Initializable {
         label.setGraphic(imageView);
     }
 
-    private void betUpDown() {
+    private void placeBet() {
 
     }
 
@@ -194,7 +195,7 @@ public class Controller implements Initializable {
         drumImg1.setImage(imageList.get(reel1));
         drumImg2.setImage(imageList.get(reel2));
         drumImg3.setImage(imageList.get(reel3));
-        jkPotTxt.setText("Spin!!!");
+        jkPotTxt.setText("Spin!!");
 
         flashAnimation1 = flashHoldBtns(btnHold1, flashAnimation1);
         flashAnimation2 = flashHoldBtns(btnHold2, flashAnimation2);
@@ -209,11 +210,16 @@ public class Controller implements Initializable {
             onWinning = true;
             jkPotTxt.setText("WINNER !!!!");
             turnOffButtons();
-            flashAnimation1.stop();
-            flashAnimation2.stop();
-            flashAnimation3.stop();
+            stopAllHoldBtnsFlash();
             winnings = credit * 3;
+            txtCredits.setText(String.valueOf(winnings));
         }
+    }
+
+    private void stopAllHoldBtnsFlash() {
+        flashAnimation1.stop();
+        flashAnimation2.stop();
+        flashAnimation3.stop();
     }
 
     private void turnOffButtons() {
