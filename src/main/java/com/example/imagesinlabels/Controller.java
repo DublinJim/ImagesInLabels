@@ -45,7 +45,9 @@ public class Controller implements Initializable {
     private int credit = 10;
     private boolean onWinning;
     private int winnings;
-    private Timeline flashAnimation;
+    private Timeline flashAnimation1;
+    private Timeline flashAnimation2;
+    private Timeline flashAnimation3;
 
     private static Background getBackground(Image image) {
         BackgroundImage backgroundImg = new BackgroundImage(
@@ -111,12 +113,17 @@ public class Controller implements Initializable {
 
     }  //end init
 
-    private void flashHoldBtns(Button button) {
-        flashAnimation = new Timeline(
-                new KeyFrame(Duration.seconds(0.5), event -> button.setVisible(!button.isVisible()))
-        );
-        flashAnimation.setCycleCount(Timeline.INDEFINITE); // Repeat indefinitely
-        flashAnimation.play();
+    private Timeline flashHoldBtns(Button button, Timeline timeline) {
+        if (timeline == null) {
+            timeline = new Timeline(
+                    new KeyFrame(Duration.seconds(0.5), event -> button.setVisible(!button.isVisible()))
+            );
+        }
+        timeline.setCycleCount(Timeline.INDEFINITE); // Repeat indefinitely
+        timeline.stop();
+        timeline.play();
+
+        return timeline;
     }
 
     private void winnerFlash(Timeline imgTestWinner) {
@@ -189,9 +196,9 @@ public class Controller implements Initializable {
         drumImg3.setImage(imageList.get(reel3));
         jkPotTxt.setText("Spin!!!");
 
-        flashHoldBtns(btnHold1);
-        flashHoldBtns(btnHold2);
-        flashHoldBtns(btnHold3);
+        flashAnimation1 = flashHoldBtns(btnHold1, flashAnimation1);
+        flashAnimation2 = flashHoldBtns(btnHold2, flashAnimation2);
+        flashAnimation3 = flashHoldBtns(btnHold3, flashAnimation3);
 
 
         validateWin(reel1, reel2, reel3);
@@ -202,7 +209,9 @@ public class Controller implements Initializable {
             onWinning = true;
             jkPotTxt.setText("WINNER !!!!");
             turnOffButtons();
-            flashAnimation.stop();
+            flashAnimation1.stop();
+            flashAnimation2.stop();
+            flashAnimation3.stop();
             winnings = credit * 3;
         }
     }
