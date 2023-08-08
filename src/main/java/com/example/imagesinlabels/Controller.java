@@ -41,8 +41,10 @@ public class Controller implements Initializable {
     public Text txtCredits;
     public Label lblAmtBet;
     public Text txtAmtBet;
+    public ImageView imgTestWinner;
     private int credit = 10;
-
+    private boolean onWinning;
+private   int winnings;
     private static Background getBackground(Image image) {
         BackgroundImage backgroundImg = new BackgroundImage(
                 image,
@@ -71,14 +73,9 @@ public class Controller implements Initializable {
         jkPotTxt.setStyle("-fx-font-size: 24; -fx-text-fill: red;");
 
         // Create the Timeline to control the blinking animation
-        Timeline timeline = getTimeline(jkPotTxt);
+        winnerFlash(getTimelineText(jkPotTxt));
 
-        // Set the animation to repeat indefinitely
-        timeline.setCycleCount(Animation.INDEFINITE);
-
-        // Start the animation
-        timeline.play();
-
+        winnerFlash(getTimelineForImage(imgTestWinner));
 
         imageList.add(new Image("bell.png"));
         imageList.add(new Image("cherry.png"));
@@ -111,29 +108,47 @@ public class Controller implements Initializable {
 
     }  //end init
 
-    private Timeline getTimeline(Text textNode) {
-        Timeline timeline = new Timeline(
+    private void winnerFlash(Timeline imgTestWinner) {
+        imgTestWinner.setCycleCount(Animation.INDEFINITE);
+        imgTestWinner.play();
+    }
+
+    private Timeline getTimelineText(Text textNode) {
+        return new Timeline(
                 new KeyFrame(Duration.ZERO, event -> textNode.setVisible(true)),
                 new KeyFrame(Duration.seconds(0.5), event -> textNode.setVisible(false)),
                 new KeyFrame(Duration.seconds(1.0), event -> textNode.setVisible(true))
         );
-        return timeline;
     }
 
+    private Timeline getTimelineForImage(ImageView imageView) {
+        return new Timeline(
+                new KeyFrame(Duration.ZERO, event -> imageView.setVisible(true)),
+                new KeyFrame(Duration.seconds(0.5), event -> imageView.setVisible(false)),
+                new KeyFrame(Duration.seconds(1.0), event -> imageView.setVisible(true))
+        );
+    }
+
+
     private void betUp() {
-        if (credit < 10) {
-            credit++;
-            betAmtTxt.setText(String.valueOf(credit));
-        } else if (credit == 10) {
-            betAmtTxt.setText(String.valueOf(credit));
+
+        if (onWinning==false) {
+            if (credit < 10) {
+                credit++;
+                betAmtTxt.setText(String.valueOf(credit));
+            } else if (credit == 10) {
+                betAmtTxt.setText(String.valueOf(credit));
+            }
         }
     }
 
     private void betDown() {
-        if (credit > 0) {
-            credit--;
-            betAmtTxt.setText(String.valueOf(credit));
-        } else if (credit == 0) betAmtTxt.setText("0");
+        if (onWinning==false) {
+            if (credit > 0) {
+                credit--;
+                betAmtTxt.setText(String.valueOf(credit));
+            } else if (credit == 0) betAmtTxt.setText("0");
+        }
     }
 
     private void imagesToNodes(String imageName, Label label) {
@@ -168,8 +183,10 @@ public class Controller implements Initializable {
 
     private void validateWin(int reel1, int reel2, int reel3) {
         if (reel1 == reel2 && reel3 == reel2) {
+            onWinning = true;
             jkPotTxt.setText("WINNER !!!!");
-            int winnings = credit*3;
+
+            winnings = credit * 3;
         }
     }
 
