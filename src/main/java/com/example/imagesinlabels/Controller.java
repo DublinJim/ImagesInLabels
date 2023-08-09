@@ -16,6 +16,9 @@ import javafx.util.Duration;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -48,8 +51,7 @@ public class Controller implements Initializable {
     private Timeline flashAnimation1;
     private Timeline flashAnimation2;
     private Timeline flashAnimation3;
-    private static System Logger;
-    private static final System.Logger logger = Logger.getLogger(Controller.class.getName());
+
 
     private static Background getBackground(Image image) {
         BackgroundImage backgroundImg = new BackgroundImage(
@@ -83,6 +85,7 @@ public class Controller implements Initializable {
         // Create the Timeline to control the blinking animation
         winnerFlash(getTimelineText(jkPotTxt));
 
+Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+background);
 
 
         imageList.add(new Image("bell.png"));
@@ -94,6 +97,8 @@ public class Controller implements Initializable {
         imageList.add(new Image("seven.png"));
         imageList.add(new Image("strawberry.png"));
         imageList.add(new Image("coin.png"));
+
+       // Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+imageList);
 
 
         drumImg1.setImage(imageList.get(0));
@@ -187,7 +192,8 @@ public class Controller implements Initializable {
     @FXML
     private int randomReel() {
         Random random = new Random();
-        return random.nextInt( imageList.size()+ 1);
+
+        return random.nextInt( imageList.size());
     }
 
 
@@ -195,7 +201,7 @@ public class Controller implements Initializable {
         int reel1 = randomReel();
         int reel2 = randomReel();
         int reel3 = randomReel();
-
+        Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+reel1);
         drumImg1.setImage(imageList.get(reel1));
         drumImg2.setImage(imageList.get(reel2));
         drumImg3.setImage(imageList.get(reel3));
