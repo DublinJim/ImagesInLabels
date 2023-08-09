@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89f23e6d-c990-416e-a071-a391dc827080" name="Changes" comment="fixes flashing problem">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/star.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java" afterDir="false" />
     </list>
@@ -243,21 +244,5 @@
     <MESSAGE value="updates the blink method" />
     <MESSAGE value="fixes flashing problem" />
     <option name="LAST_COMMIT_MESSAGE" value="fixes flashing problem" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java</url>
-          <line>154</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/imagesinlabels/Controller.java</url>
-          <line>139</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

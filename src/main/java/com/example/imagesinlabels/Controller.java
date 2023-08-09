@@ -48,6 +48,8 @@ public class Controller implements Initializable {
     private Timeline flashAnimation1;
     private Timeline flashAnimation2;
     private Timeline flashAnimation3;
+    private static System Logger;
+    private static final System.Logger logger = Logger.getLogger(Controller.class.getName());
 
     private static Background getBackground(Image image) {
         BackgroundImage backgroundImg = new BackgroundImage(
@@ -70,6 +72,7 @@ public class Controller implements Initializable {
         rootPane.setBackground(background);
 
 
+
         Image reelsPic = new Image("marquee.png");
         Background reelBackGround = getBackground(reelsPic);
         spinHbox.setBackground(reelBackGround);
@@ -90,6 +93,7 @@ public class Controller implements Initializable {
         imageList.add(new Image("orange.png"));
         imageList.add(new Image("seven.png"));
         imageList.add(new Image("strawberry.png"));
+        imageList.add(new Image("coin.png"));
 
 
         drumImg1.setImage(imageList.get(0));
@@ -183,7 +187,7 @@ public class Controller implements Initializable {
     @FXML
     private int randomReel() {
         Random random = new Random();
-        return random.nextInt(2 + 1);
+        return random.nextInt( imageList.size()+ 1);
     }
 
 
