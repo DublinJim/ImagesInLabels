@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-08-11T18:12:30.791033600Z</date>
+  <millis>1691777550791</millis>
+  <nanos>33600</nanos>
+  <sequence>1</sequence>
+  <logger>MyLogger</logger>
+  <level>INFO</level>
+  <class>com.example.imagesinlabels.Controller</class>
+  <method>logMessage</method>
+  <thread>17</thread>
+  <message>com.example.imagesinlabels.Controller 8</message>
+</record>
+<record>
+  <date>2023-08-11T18:12:34.038556Z</date>
+  <millis>1691777554038</millis>
+  <nanos>556000</nanos>
+  <sequence>2</sequence>
+  <logger>MyLogger</logger>
+  <level>INFO</level>
+  <class>com.example.imagesinlabels.Controller</class>
+  <method>logMessage</method>
+  <thread>17</thread>
+  <message>com.example.imagesinlabels.Controller 3</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-08-11T18:16:53.361854900Z</date>
+  <millis>1691777813361</millis>
+  <nanos>854900</nanos>
+  <sequence>1</sequence>
+  <logger>MyLogger</logger>
+  <level>INFO</level>
+  <class>com.example.imagesinlabels.Controller</class>
+  <method>logMessage</method>
+  <thread>17</thread>
+  <message>com.example.imagesinlabels.Controller 8</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+</log>

@@ -18,6 +18,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.logging.FileHandler;
@@ -218,7 +219,17 @@ private Logger logger;
         int reel1 = randomReel();
         int reel2 = randomReel();
         int reel3 = randomReel();
-       // Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+reel1);
+
+        String[] makeup ={"Cherry","apple","banana"};
+
+        try {
+            System.out.println(makeup[3]);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+
+        }
+
+
         logMessage(getClass().getName()+" " + reel1);
         drumImg1.setImage(imageList.get(reel1));
         drumImg2.setImage(imageList.get(reel2));
