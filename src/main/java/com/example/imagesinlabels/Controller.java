@@ -13,6 +13,9 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
@@ -53,21 +56,17 @@ public class Controller implements Initializable {
     private Timeline flashAnimation3;
 
 
-    private static Background getBackground(Image image) {
-        BackgroundImage backgroundImg = new BackgroundImage(
-                image,
-                BackgroundRepeat.NO_REPEAT, // Set to REPEAT if you want to repeat the image
-                BackgroundRepeat.NO_REPEAT,
-                BackgroundPosition.DEFAULT,
-                new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true)
 
-        );
-
-        return new Background(backgroundImg);
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        //begin /////////////////////////////////////////////////////
+
+
+        writeOut("log file "+getClass().getName());
+
+
         imgTestWinner.setVisible(false);
         Image backgroundImage = new Image("background2.PNG");
         Background background = getBackground(backgroundImage);
@@ -122,6 +121,17 @@ Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+backgrou
 
 
     }  //end init
+
+    private static void writeOut(String errorString) {
+        try {
+            FileWriter fileWriter = new FileWriter("output.txt");
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+            writer.write(errorString);
+            writer.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     private Timeline flashHoldBtns(Button button, Timeline timeline) {
         if (timeline == null) {
@@ -237,5 +247,20 @@ Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+backgrou
         btnSpin.setDisable(true);
 
     }
+
+
+    private static Background getBackground(Image image) {
+        BackgroundImage backgroundImg = new BackgroundImage(
+                image,
+                BackgroundRepeat.NO_REPEAT, // Set to REPEAT if you want to repeat the image
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.DEFAULT,
+                new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, true)
+
+        );
+
+        return new Background(backgroundImg);
+    }
+
 
 }//end
