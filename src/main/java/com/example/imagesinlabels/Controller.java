@@ -19,10 +19,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.ResourceBundle;
+import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     private final ArrayList<Image> imageList = new ArrayList<>();
@@ -37,7 +37,6 @@ public class Controller implements Initializable {
     public Button btnSpin;
     public Text betAmtTxt;
     public Text jkPotTxt;
-
 
     public ColumnConstraints reelGrid;
     public HBox spinHbox;
@@ -55,13 +54,22 @@ public class Controller implements Initializable {
     private Timeline flashAnimation2;
     private Timeline flashAnimation3;
 
-
+private Logger logger;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         //begin /////////////////////////////////////////////////////
+         logger = Logger.getLogger("MyLogger");
+
+
+        try {
+            FileHandler fileHandler = new FileHandler("app.log", true);
+            logger.addHandler(fileHandler);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
 
         writeOut("log file "+getClass().getName());
@@ -84,7 +92,6 @@ public class Controller implements Initializable {
         // Create the Timeline to control the blinking animation
         winnerFlash(getTimelineText(jkPotTxt));
 
-Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+background);
 
 
         imageList.add(new Image("bell.png"));
@@ -97,7 +104,7 @@ Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+backgrou
         imageList.add(new Image("strawberry.png"));
         imageList.add(new Image("coin.png"));
 
-       // Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+imageList);
+
 
 
         drumImg1.setImage(imageList.get(0));
@@ -211,7 +218,8 @@ Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+backgrou
         int reel1 = randomReel();
         int reel2 = randomReel();
         int reel3 = randomReel();
-        Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+reel1);
+       // Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+reel1);
+        logMessage(getClass().getName()+" " + reel1);
         drumImg1.setImage(imageList.get(reel1));
         drumImg2.setImage(imageList.get(reel2));
         drumImg3.setImage(imageList.get(reel3));
@@ -260,6 +268,12 @@ Logger.getLogger(getClass().getName()).log(Level.INFO,"this is logged "+backgrou
         );
 
         return new Background(backgroundImg);
+    }
+
+    private void logMessage(String message) {
+        if (logger != null) {
+            logger.log(Level.INFO,message);
+        }
     }
 
 
